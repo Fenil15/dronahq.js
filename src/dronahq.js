@@ -1,7 +1,7 @@
 /*
-    DronaHQ Native Container SDK - v7.0.10
+	DronaHQ Native Container SDK - v7.0.12
     Author: Mohit Agarwal
-    Date: 11/07/2019
+    Date: 11/10/2019
 */
 ;
 (function () {
@@ -1328,7 +1328,8 @@
                   break;
                 case "none":
                   break;
-                default: {
+                    default:
+                        {
                   error(new NativeStorageError(NativeStorageError.WRONG_PARAMETER, "JS", ""));
                   return;
                 }
@@ -1370,7 +1371,8 @@
                   break;
                 case "none":
                   break;
-                default: {
+                    default:
+                        {
                   error(new NativeStorageError(NativeStorageError.WRONG_PARAMETER, "JS", ""));
                   return;
                 }
@@ -7041,8 +7043,7 @@
 
         // X Social Sharing: https://github.com/dronahq/SocialSharing-PhoneGap-Plugin
         cordova.define("cordova-plugin-x-socialsharing.SocialSharing", function (require, exports, module) {
-            function SocialSharing() {
-            }
+            function SocialSharing() {}
 
             // Override this method (after deviceready) to set the location where you want the iPad popup arrow to appear.
             // If not overridden with different values, the popup is not used. Example:
@@ -7384,8 +7385,7 @@
                  *
                  *  Copyright (c) 2016 Dave Alden (Working Edge Ltd.)
                 **/
-                var RequestLocationAccuracy = function () {
-                };
+                var RequestLocationAccuracy = function() {};
 
                 /**
                  * Requests a position to invoke to native dialog to turn on Location Services.
@@ -8507,8 +8507,7 @@
                                 var errorObj = new ContactError(ContactError.UNKNOWN_ERROR);
                                 errorCB(errorObj);
                             }
-                        }
-                        else {
+                        } else {
                             exec(null, errorCB, "Contacts", "displayContact", [this.id, options]);
                         }
                     }
@@ -8608,8 +8607,7 @@
                 if (typeof options === 'string') { // ensuring backward compatibility
                     window.console.warn('[DEPRECATED] Passing a string as a third argument is deprecated. Please refer to the documentation to pass the right parameter: https://github.com/cordova-sms/cordova-sms-plugin.');
                     androidIntent = options;
-                }
-                else if (typeof options === 'object') {
+                } else if (typeof options === 'object') {
                     replaceLineBreaks = options.replaceLineBreaks || false;
                     if (options.android && typeof options.android === 'object') {
                         androidIntent = options.android.intent;
@@ -11560,8 +11558,7 @@
                 ]
             }];
 
-            var arrCamera = [
-                {
+            var arrCamera = [{
                     "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
                     "id": "cordova-plugin-camera.Camera",
                     "clobbers": [
@@ -11585,22 +11582,18 @@
                     "clobbers": [
                         "CameraPopoverHandle"
                     ]
-                }
-            ];
+            }];
 
-            var arrInAppBrowser = [
-                {
+            var arrInAppBrowser = [{
                 "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
                 "id": "cordova-plugin-inappbrowser.inappbrowser",
                 "clobbers": [
                     "cordova.InAppBrowser.open",
                     "window.open"
                 ]
-                }
-            ];
+            }];
 
-            var arrDronaHQ = [
-                {
+            var arrDronaHQ = [{
                 "id": "cordova-plugin-dronahq.user",
                 "clobbers": [
                     "DronaHQ.user"
@@ -11625,8 +11618,7 @@
                     "clobbers": [
                         "DronaHQ.KVStore"
                     ]
-                }
-            ];
+            }];
 
             var arrTts = [{
                 "id": "cordova-plugin-tts",
@@ -11652,14 +11644,12 @@
                 ]
             }];
 
-            var arrfileOpener2 = [
-                {
+            var arrfileOpener2 = [{
                     'id':'cordova-plugin-file-opener2',
                     "clobbers":[
                         "FileOpener2"
                     ]
-                }
-            ]
+            }]
             var arrSTT = [{
                 "id": "cordova-plugin-speechrecognition",
                 "clobbers": [
@@ -11667,8 +11657,7 @@
                 ]
             }]
             
-            var arrFileTransfer = [
-                {
+            var arrFileTransfer = [{
                 "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
                 "id": "cordova-plugin-file-transfer.FileTransferError",
                 "clobbers": [
@@ -11684,8 +11673,7 @@
                 }
             ];
 
-            var arrFile = [
-                {
+            var arrFile = [{
                     "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
                     "id": "cordova-plugin-file.DirectoryEntry",
                     "clobbers": [
@@ -11810,8 +11798,7 @@
                         "cordova"
                     ],
                     "runs": true
-                }
-            ];
+            }];
 
             var arrGeo = [{
                 "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
@@ -11839,15 +11826,13 @@
                 ]
             }];
 
-            var arrSqlliteStorage = [
-                {
+            var arrSqlliteStorage = [{
                 "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
                 "id": "cordova-sqlite-storage.SQLitePlugin",
                 "clobbers": [
                     "SQLitePlugin"
                 ]
-                }
-            ];
+            }];
 
             var arrDecimalKeyboard = [{
                 "file": "",
@@ -11864,15 +11849,13 @@
                 ]
             }];
             
-            var arrKeyboardAndroid = [
-                {
+            var arrKeyboardAndroid = [{
                 "file": "",
                 "id": "ionic-plugin-keyboard.Android",
                 "clobbers": [
                     "cordova.plugins.Keyboard"
                 ]
-                }
-            ];
+            }];
 
             var arrLocalNotification = [{
                 "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
@@ -11988,7 +11971,8 @@
                 "clobbers": [
                     "navigator.compass"
                 ]
-            }];
+                }
+            ];
 
             var arrEmailPlugin = [{
                 "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
@@ -12151,7 +12135,8 @@
                 "clobbers": [
                     "window.Media"
                 ]
-            }];
+                }
+            ];
 
             var arrGlobalization = [{
                 "id": "cordova-plugin-globalization.GlobalizationError",
@@ -12168,7 +12153,8 @@
                 "clobbers": [
                     "navigator.globalization"
                 ]
-            }];
+                }
+            ];
 
             var arrPluginList = [];
             var objPluginMeta = {
@@ -13622,8 +13608,7 @@
         define("cordova/platform", function (require, exports, module) {
             module.exports = {
                 id: 'win10',
-                bootstrap: function () {
-                }
+                bootstrap: function() {}
             };
         });
 
